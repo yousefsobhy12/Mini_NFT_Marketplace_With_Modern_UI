@@ -1,7 +1,7 @@
 import 'dart:ui';
 import 'package:flutter/material.dart';
-import 'package:mini_nft_marketplace_with_modern_ui/core/resources/colors_manager.dart';
 import 'package:mini_nft_marketplace_with_modern_ui/core/resources/fonts_manager.dart';
+import 'package:mini_nft_marketplace_with_modern_ui/core/resources/routes_manager.dart';
 import 'package:mini_nft_marketplace_with_modern_ui/core/resources/strings_manager.dart';
 import 'package:mini_nft_marketplace_with_modern_ui/features/on_boarding/widgets/custom_on_boarding_screen_button.dart';
 
@@ -26,7 +26,6 @@ class CustomOnBoardingScreenCard extends StatelessWidget {
                   style: TextStyle(
                     fontFamily: FontsManager.sfProDisplay,
                     fontWeight: FontWeight.w900,
-                    color: ColorsManager.white,
                     fontSize: 20,
                   ),
                 ),
@@ -42,7 +41,14 @@ class CustomOnBoardingScreenCard extends StatelessWidget {
                   ),
                 ),
                 SizedBox(height: 30),
-                CustomOnBoardingScreenButton(),
+                CustomOnBoardingScreenButton(
+                  onPressed: () {
+                    Navigator.pushReplacementNamed(
+                      context,
+                      RoutesNames.kHomeScreen,
+                    );
+                  },
+                ),
               ],
             ),
           ),

@@ -4,4 +4,5 @@ abstract class StringsManager {
   static const String onBoardingCardDescription =
       'You can buy and sell the NFTs of the best\nartists in the world.';
   static const String onBoardingButtonText = 'Get started now';
+  static const String homeScreenAppBarTitle = 'NFT Marketplace';
 }
