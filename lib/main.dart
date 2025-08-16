@@ -18,7 +18,7 @@ class NFTMarketplace extends StatelessWidget {
         scaffoldBackgroundColor: ColorsManager.kScaffoldBackgroundColor,
       ),
       routes: RoutesManager.routes,
-      initialRoute: RoutesNames.kOnBoardingScreen,
+      initialRoute: RoutesNames.kHomeScreen,
     );
   }
 }

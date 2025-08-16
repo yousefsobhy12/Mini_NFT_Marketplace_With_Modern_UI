@@ -3,6 +3,7 @@ import 'package:mini_nft_marketplace_with_modern_ui/core/resources/fonts_manager
 import 'package:mini_nft_marketplace_with_modern_ui/core/resources/strings_manager.dart';
 import 'package:mini_nft_marketplace_with_modern_ui/features/home/models/category_model.dart';
 import 'package:mini_nft_marketplace_with_modern_ui/features/home/widgets/custom_category_home_screen.dart';
+import 'package:mini_nft_marketplace_with_modern_ui/features/home/widgets/custom_trending_collections_title_widget.dart';
 
 // ignore: must_be_immutable
 class HomeScreen extends StatelessWidget {
@@ -47,6 +48,8 @@ class HomeScreen extends StatelessWidget {
               },
             ),
           ),
+          SizedBox(height: 30),
+          CustomTrendingCollectionsTitleWidget(),
         ],
       ),
     );
