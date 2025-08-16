@@ -4,6 +4,7 @@ import 'package:mini_nft_marketplace_with_modern_ui/core/resources/strings_manag
 import 'package:mini_nft_marketplace_with_modern_ui/features/home/models/category_model.dart';
 import 'package:mini_nft_marketplace_with_modern_ui/features/home/models/trending_collections_model.dart';
 import 'package:mini_nft_marketplace_with_modern_ui/features/home/widgets/custom_category_home_screen.dart';
+import 'package:mini_nft_marketplace_with_modern_ui/features/home/widgets/custom_top_seller_card.dart';
 import 'package:mini_nft_marketplace_with_modern_ui/features/home/widgets/custom_trending_collections_card.dart';
 import 'package:mini_nft_marketplace_with_modern_ui/features/home/widgets/custom_trending_collections_title_widget.dart';
 
@@ -45,7 +46,7 @@ class HomeScreen extends StatelessWidget {
               ),
             ),
             SizedBox(height: 30),
-            CustomTrendingCollectionsTitleWidget(),
+            CustomTitleWidget(title: StringsManager.trendingCollectionsTitle),
             SizedBox(height: 8),
             SizedBox(
               height: 216,
@@ -63,6 +64,10 @@ class HomeScreen extends StatelessWidget {
                 },
               ),
             ),
+            SizedBox(height: 30),
+            CustomTitleWidget(title: StringsManager.topSellerTitle),
+            SizedBox(height: 8),
+            CustomTopSellerCard()
           ],
         ),
       ),
