@@ -2,20 +2,15 @@ import 'package:flutter/material.dart';
 import 'package:mini_nft_marketplace_with_modern_ui/core/resources/fonts_manager.dart';
 import 'package:mini_nft_marketplace_with_modern_ui/core/resources/strings_manager.dart';
 import 'package:mini_nft_marketplace_with_modern_ui/features/home/models/category_model.dart';
+import 'package:mini_nft_marketplace_with_modern_ui/features/home/models/trending_collections_model.dart';
 import 'package:mini_nft_marketplace_with_modern_ui/features/home/widgets/custom_category_home_screen.dart';
+import 'package:mini_nft_marketplace_with_modern_ui/features/home/widgets/custom_trending_collections_card.dart';
 import 'package:mini_nft_marketplace_with_modern_ui/features/home/widgets/custom_trending_collections_title_widget.dart';
 
 // ignore: must_be_immutable
 class HomeScreen extends StatelessWidget {
-  HomeScreen({super.key});
-  List<CategoryModel> categories = [
-    CategoryModel(title: 'Music', image: 'assets/images/category_image3.png'),
-    CategoryModel(title: 'Art', image: 'assets/images/category_image1.png'),
-    CategoryModel(
-      title: 'Virtual Worlds',
-      image: 'assets/images/category_image2.png',
-    ),
-  ];
+  const HomeScreen({super.key});
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -30,27 +25,46 @@ class HomeScreen extends StatelessWidget {
           ),
         ),
       ),
-      body: Column(
-        children: [
-          SizedBox(height: 20),
-          SizedBox(
-            height: 180,
-            child: ListView.separated(
-              itemCount: categories.length,
-              scrollDirection: Axis.horizontal,
-              itemBuilder: (context, index) {
-                return CustomCategoryCardHomeScreen(
-                  categoryModel: categories[index],
-                );
-              },
-              separatorBuilder: (context, index) {
-                return SizedBox(width: 10);
-              },
+      body: SingleChildScrollView(
+        child: Column(
+          children: [
+            SizedBox(height: 20),
+            SizedBox(
+              height: 180,
+              child: ListView.separated(
+                itemCount: CategoryModel.categories.length,
+                scrollDirection: Axis.horizontal,
+                itemBuilder: (context, index) {
+                  return CustomCategoryCardHomeScreen(
+                    categoryModel: CategoryModel.categories[index],
+                  );
+                },
+                separatorBuilder: (context, index) {
+                  return SizedBox(width: 10);
+                },
+              ),
             ),
-          ),
-          SizedBox(height: 30),
-          CustomTrendingCollectionsTitleWidget(),
-        ],
+            SizedBox(height: 30),
+            CustomTrendingCollectionsTitleWidget(),
+            SizedBox(height: 8),
+            SizedBox(
+              height: 216,
+              child: ListView.separated(
+                scrollDirection: Axis.horizontal,
+                itemCount: TrendingCollectionsModel.list.length,
+                itemBuilder: (BuildContext context, int index) {
+                  return CustomTrendingCollectionsCard(
+                    trendingCollectionsModel:
+                        TrendingCollectionsModel.list[index],
+                  );
+                },
+                separatorBuilder: (BuildContext context, int index) {
+                  return SizedBox(width: 10);
+                },
+              ),
+            ),
+          ],
+        ),
       ),
     );
   }
