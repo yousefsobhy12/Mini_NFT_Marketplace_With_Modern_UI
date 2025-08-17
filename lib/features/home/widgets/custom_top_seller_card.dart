@@ -4,9 +4,12 @@ import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:mini_nft_marketplace_with_modern_ui/core/resources/colors_manager.dart';
 import 'package:mini_nft_marketplace_with_modern_ui/core/resources/fonts_manager.dart';
+import 'package:mini_nft_marketplace_with_modern_ui/features/home/models/top_seller_model.dart';
 
 class CustomTopSellerCard extends StatelessWidget {
-  const CustomTopSellerCard({super.key});
+  const CustomTopSellerCard({super.key, required this.model});
+
+  final TopSellerModel model;
 
   @override
   Widget build(BuildContext context) {
@@ -15,6 +18,8 @@ class CustomTopSellerCard extends StatelessWidget {
       child: BackdropFilter(
         filter: ImageFilter.blur(sigmaX: 13, sigmaY: 13),
         child: Container(
+          height: 262,
+          width: 175,
           color: const Color.fromARGB(57, 255, 255, 255),
           child: Padding(
             padding: const EdgeInsets.all(10),
@@ -28,13 +33,13 @@ class CustomTopSellerCard extends StatelessWidget {
                     borderRadius: BorderRadiusGeometry.circular(22),
                     image: DecorationImage(
                       fit: BoxFit.cover,
-                      image: AssetImage('assets/images/top_seller/t1.jpg'),
+                      image: AssetImage(model.image),
                     ),
                   ),
                 ),
                 SizedBox(height: 10),
                 Text(
-                  'Wave',
+                  model.title,
                   style: TextStyle(
                     color: ColorsManager.white,
                     fontFamily: FontsManager.sfProText,
@@ -42,7 +47,7 @@ class CustomTopSellerCard extends StatelessWidget {
                   ),
                 ),
                 Text(
-                  'wav2 #5672',
+                  model.subTitle,
                   style: TextStyle(
                     fontSize: 13,
                     color: Color(0xffACA3BB),
@@ -55,7 +60,7 @@ class CustomTopSellerCard extends StatelessWidget {
                   children: [
                     SvgPicture.asset('assets/images/icon.svg'),
                     Text(
-                      '0.018',
+                      model.price.toString(),
                       style: TextStyle(
                         color: ColorsManager.white,
                         fontFamily: FontsManager.sfProText,
@@ -63,7 +68,7 @@ class CustomTopSellerCard extends StatelessWidget {
                     ),
                     Spacer(),
                     Text(
-                      '❤️ 5160',
+                      '❤️ ${model.likes}',
                       style: TextStyle(
                         color: Color(0xffACA3BB),
                         fontFamily: FontsManager.sfProText,
@@ -71,7 +76,6 @@ class CustomTopSellerCard extends StatelessWidget {
                     ),
                   ],
                 ),
-                SizedBox(height: 10),
               ],
             ),
           ),
