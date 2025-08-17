@@ -2,6 +2,7 @@ import 'dart:ui';
 
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
+import 'package:mini_nft_marketplace_with_modern_ui/core/resources/assets_manager.dart';
 import 'package:mini_nft_marketplace_with_modern_ui/core/resources/colors_manager.dart';
 import 'package:mini_nft_marketplace_with_modern_ui/core/resources/fonts_manager.dart';
 import 'package:mini_nft_marketplace_with_modern_ui/features/home/models/top_seller_model.dart';
@@ -58,7 +59,7 @@ class CustomTopSellerCard extends StatelessWidget {
                 Row(
                   spacing: 6,
                   children: [
-                    SvgPicture.asset('assets/images/icon.svg'),
+                    SvgPicture.asset(AssetsManager.priceIcon),
                     Text(
                       model.price.toString(),
                       style: TextStyle(

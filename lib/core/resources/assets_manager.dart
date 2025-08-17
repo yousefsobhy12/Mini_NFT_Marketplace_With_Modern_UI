@@ -25,4 +25,11 @@ abstract class AssetsManager {
   static const String top6 = 'assets/images/top_seller/t6.jpg';
   static const String top7 = 'assets/images/top_seller/t7.jpg';
   static const String top8 = 'assets/images/top_seller/t8.jpg';
+
+  // Icons
+  static const String priceIcon = 'assets/images/icons/price_icon.svg';
+  static const String homeIcon = 'assets/images/icons/home_icon.svg';
+  static const String statsIcon = 'assets/images/icons/stats_icon.svg';
+  static const String searchIcon = 'assets/images/icons/search_icon.svg';
+  static const String profileIcon = 'assets/images/icons/profile_icon.svg';
 }

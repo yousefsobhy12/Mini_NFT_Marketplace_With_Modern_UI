@@ -1,24 +1,21 @@
+import 'package:mini_nft_marketplace_with_modern_ui/core/resources/assets_manager.dart';
+
 class TrendingCollectionsModel {
   final String image;
   final String title;
 
   TrendingCollectionsModel({required this.image, required this.title});
+
   static List<TrendingCollectionsModel> list = [
+    TrendingCollectionsModel(image: AssetsManager.trend1, title: '3D Art'),
     TrendingCollectionsModel(
-      image: 'assets/images/trending/t1.jpg',
-      title: '3D Art',
-    ),
-    TrendingCollectionsModel(
-      image: 'assets/images/trending/t2.jpg',
+      image: AssetsManager.trend2,
       title: 'Abstract Art',
     ),
     TrendingCollectionsModel(
-      image: 'assets/images/trending/t3.jpg',
+      image: AssetsManager.trend3,
       title: 'Portrait Art',
     ),
-    TrendingCollectionsModel(
-      image: 'assets/images/trending/t4.jpg',
-      title: 'Metaverse',
-    ),
+    TrendingCollectionsModel(image: AssetsManager.trend4, title: 'Metaverse'),
   ];
 }
