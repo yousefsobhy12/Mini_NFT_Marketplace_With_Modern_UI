@@ -19,6 +19,7 @@ class HomeScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      extendBody: true,
       appBar: AppBar(
         centerTitle: true,
         title: Text(
@@ -30,9 +31,8 @@ class HomeScreen extends StatelessWidget {
           ),
         ),
       ),
-      body: SafeArea(
-        child: SingleChildScrollView(
-          physics: BouncingScrollPhysics(),
+      body: SingleChildScrollView(
+        child: SafeArea(
           child: Column(
             children: [
               SizedBox(height: 20),
@@ -88,6 +88,7 @@ class HomeScreen extends StatelessWidget {
                   },
                 ),
               ),
+              SizedBox(height: 20),
             ],
           ),
         ),
