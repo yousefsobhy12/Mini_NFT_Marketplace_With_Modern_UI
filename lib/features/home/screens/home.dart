@@ -33,7 +33,7 @@ class _HomeState extends State<Home> {
         height: 80,
         width: 80,
         child: FloatingActionButton(
-          backgroundColor: Color(0xffF7DEF1),
+          backgroundColor: Color.fromARGB(78, 247, 222, 241),
           shape: StarBorder.polygon(sides: 6, pointRounding: 0.4),
           onPressed: () {},
           child: Icon(

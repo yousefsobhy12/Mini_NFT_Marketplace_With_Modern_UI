@@ -32,67 +32,74 @@ class HomeScreen extends StatelessWidget {
           ),
         ),
       ),
-      body: SingleChildScrollView(
-        child: SafeArea(
-          child: Column(
-            children: [
-              SizedBox(height: 20),
-              SizedBox(
-                height: 180,
-                child: ListView.separated(
-                  itemCount: CategoryModel.categories.length,
-                  scrollDirection: Axis.horizontal,
-                  itemBuilder: (context, index) {
-                    return CustomCategoryCardHomeScreen(
-                      categoryModel: CategoryModel.categories[index],
-                    );
-                  },
-                  separatorBuilder: (context, index) {
-                    return SizedBox(width: 10);
-                  },
-                ),
+      body: Stack(
+        children: [
+          Center(child: Image.asset('assets/images/ellipse.png')),
+          SingleChildScrollView(
+            child: SafeArea(
+              child: Column(
+                children: [
+                  SizedBox(height: 20),
+                  SizedBox(
+                    height: 180,
+                    child: ListView.separated(
+                      itemCount: CategoryModel.categories.length,
+                      scrollDirection: Axis.horizontal,
+                      itemBuilder: (context, index) {
+                        return CustomCategoryCardHomeScreen(
+                          categoryModel: CategoryModel.categories[index],
+                        );
+                      },
+                      separatorBuilder: (context, index) {
+                        return SizedBox(width: 10);
+                      },
+                    ),
+                  ),
+                  SizedBox(height: 30),
+                  CustomTitleWidget(
+                    title: StringsManager.trendingCollectionsTitle,
+                  ),
+                  SizedBox(height: 8),
+                  SizedBox(
+                    height: 216,
+                    child: ListView.separated(
+                      physics: BouncingScrollPhysics(),
+                      scrollDirection: Axis.horizontal,
+                      itemCount: trendingCollectionsList.length,
+                      itemBuilder: (BuildContext context, int index) {
+                        return CustomTrendingCollectionsCard(
+                          trendingCollectionsModel:
+                              trendingCollectionsList[index],
+                        );
+                      },
+                      separatorBuilder: (BuildContext context, int index) {
+                        return SizedBox(width: 10);
+                      },
+                    ),
+                  ),
+                  SizedBox(height: 30),
+                  CustomTitleWidget(title: StringsManager.topSellerTitle),
+                  SizedBox(height: 8),
+                  SizedBox(
+                    height: 262,
+                    child: ListView.separated(
+                      physics: BouncingScrollPhysics(),
+                      scrollDirection: Axis.horizontal,
+                      itemCount: topSellerList.length,
+                      itemBuilder: (context, index) {
+                        return CustomTopSellerCard(model: topSellerList[index]);
+                      },
+                      separatorBuilder: (context, index) {
+                        return SizedBox(width: 10);
+                      },
+                    ),
+                  ),
+                  SizedBox(height: 20),
+                ],
               ),
-              SizedBox(height: 30),
-              CustomTitleWidget(title: StringsManager.trendingCollectionsTitle),
-              SizedBox(height: 8),
-              SizedBox(
-                height: 216,
-                child: ListView.separated(
-                  physics: BouncingScrollPhysics(),
-                  scrollDirection: Axis.horizontal,
-                  itemCount: trendingCollectionsList.length,
-                  itemBuilder: (BuildContext context, int index) {
-                    return CustomTrendingCollectionsCard(
-                      trendingCollectionsModel: trendingCollectionsList[index],
-                    );
-                  },
-                  separatorBuilder: (BuildContext context, int index) {
-                    return SizedBox(width: 10);
-                  },
-                ),
-              ),
-              SizedBox(height: 30),
-              CustomTitleWidget(title: StringsManager.topSellerTitle),
-              SizedBox(height: 8),
-
-              SizedBox(
-                height: 262,
-                child: ListView.separated(
-                  physics: BouncingScrollPhysics(),
-                  scrollDirection: Axis.horizontal,
-                  itemCount: topSellerList.length,
-                  itemBuilder: (context, index) {
-                    return CustomTopSellerCard(model: topSellerList[index]);
-                  },
-                  separatorBuilder: (context, index) {
-                    return SizedBox(width: 10);
-                  },
-                ),
-              ),
-              SizedBox(height: 20),
-            ],
+            ),
           ),
-        ),
+        ],
       ),
     );
   }
