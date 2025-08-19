@@ -21,7 +21,7 @@ class CustomBottomNavBar extends StatelessWidget {
         child: Container(
           height: 100,
           padding: EdgeInsets.symmetric(horizontal: 20),
-          color: const Color.fromARGB(57, 255, 255, 255),
+          color: Colors.white.withOpacity(0.05),
           child: Row(
             spacing: 30,
             children: [

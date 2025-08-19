@@ -9,6 +9,7 @@ import 'package:mini_nft_marketplace_with_modern_ui/features/home/widgets/custom
 import 'package:mini_nft_marketplace_with_modern_ui/features/home/widgets/custom_trending_collections_card.dart';
 import 'package:mini_nft_marketplace_with_modern_ui/features/home/widgets/custom_trending_collections_title_widget.dart';
 
+// ignore: must_be_immutable
 class HomeScreen extends StatelessWidget {
   HomeScreen({super.key});
 

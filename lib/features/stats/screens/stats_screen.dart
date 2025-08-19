@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:mini_nft_marketplace_with_modern_ui/core/resources/colors_manager.dart';
 import 'package:mini_nft_marketplace_with_modern_ui/core/resources/fonts_manager.dart';
-
+import 'package:mini_nft_marketplace_with_modern_ui/core/resources/strings_manager.dart';
+import 'package:mini_nft_marketplace_with_modern_ui/features/stats/widgets/custom_stats_drop_down_list.dart';
 import '../widgets/custom_tab_bar_item.dart';
 
 class StatsScreen extends StatelessWidget {
@@ -16,7 +16,7 @@ class StatsScreen extends StatelessWidget {
         appBar: AppBar(
           centerTitle: true,
           title: Text(
-            'Stats',
+            StringsManager.stats,
             style: TextStyle(
               fontSize: 20,
               fontFamily: FontsManager.sfProDisplay,
@@ -32,17 +32,40 @@ class StatsScreen extends StatelessWidget {
           bottom: TabBar(
             tabs: [
               CustomTabBarItem(
-                title: 'Ranking',
+                title: StringsManager.ranking,
                 icon: Icons.bar_chart_outlined,
               ),
-              CustomTabBarItem(title: 'Activity', icon: Icons.timeline_rounded),
+              CustomTabBarItem(
+                title: StringsManager.activity,
+                icon: Icons.timeline_rounded,
+              ),
             ],
           ),
         ),
         body: TabBarView(
           children: [
-            Center(child: Text('Ranking')),
-            Center(child: Text('Activity')),
+            Padding(
+              padding: const EdgeInsets.symmetric(horizontal: 16),
+              child: Column(
+                children: [
+                  SizedBox(height: 30),
+                  Row(
+                    spacing: 20,
+                    children: [
+                      CustomStatsDropDownList(
+                        title: StringsManager.allCategories,
+                        icon: Icons.grid_view_outlined,
+                      ),
+                      CustomStatsDropDownList(
+                        title: StringsManager.allChains,
+                        icon: Icons.link,
+                      ),
+                    ],
+                  ),
+                ],
+              ),
+            ),
+            Center(child: Text(StringsManager.activity)),
           ],
         ),
       ),

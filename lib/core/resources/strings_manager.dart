@@ -15,4 +15,11 @@ abstract class StringsManager {
   static const String category1 = 'Music';
   static const String category2 = 'Art';
   static const String category3 = 'Virtual Worlds';
+
+  // ------> STATS SCREEN <------
+  static const String stats = 'Stats';
+  static const String ranking = 'Ranking';
+  static const String activity = 'Activity';
+  static const String allCategories = 'All Categories';
+  static const String allChains = 'All Chains';
 }
