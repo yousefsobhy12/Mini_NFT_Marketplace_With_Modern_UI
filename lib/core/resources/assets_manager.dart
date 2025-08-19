@@ -32,4 +32,16 @@ abstract class AssetsManager {
   static const String statsIcon = 'assets/images/icons/stats_icon.svg';
   static const String searchIcon = 'assets/images/icons/search_icon.svg';
   static const String profileIcon = 'assets/images/icons/profile_icon.svg';
+
+  // Ranking screen
+  static const String rankingItem1 = 'assets/images/stats_screen/1.jpg';
+  static const String rankingItem2 = 'assets/images/stats_screen/2.jpg';
+  static const String rankingItem3 = 'assets/images/stats_screen/3.jpg';
+  static const String rankingItem4 = 'assets/images/stats_screen/4.jpg';
+  static const String rankingItem5 = 'assets/images/stats_screen/5.jpg';
+  static const String rankingItem6 = 'assets/images/stats_screen/6.jpg';
+  static const String rankingItem7 = 'assets/images/stats_screen/7.jpg';
+  static const String rankingItem8 = 'assets/images/stats_screen/8.jpg';
+  static const String rankingItem9 = 'assets/images/stats_screen/9.jpg';
+  static const String rankingItem10 = 'assets/images/stats_screen/10.jpg';
 }
