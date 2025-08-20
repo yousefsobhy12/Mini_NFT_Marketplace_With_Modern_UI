@@ -21,11 +21,11 @@ This project showcases trending NFT collections, top sellers, and ranking stats 
 
 ## 📸 Screenshots
 
-### Home Screen  
-![Home Screen](assets/images/screenshots/home.png)
+### Home Screen
+<img src="assets/images/screenshots/home.png" alt="Home Screen" width="300"/>
 
-### Stats Screen  
-![Stats Screen](assets/images/screenshots/stats.png)
+### Stats Screen
+<img src="assets/images/screenshots/stats.png" alt="Stats Screen" width="300"/>
 
 ---
 
