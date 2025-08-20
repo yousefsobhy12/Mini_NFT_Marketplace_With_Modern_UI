@@ -15,7 +15,7 @@ class NFTMarketplace extends StatelessWidget {
       debugShowCheckedModeBanner: false,
       theme: AppTheme.appTheme,
       routes: RoutesManager.routes,
-      initialRoute: RoutesNames.kHome,
+      initialRoute: RoutesNames.kOnBoardingScreen,
     );
   }
 }
