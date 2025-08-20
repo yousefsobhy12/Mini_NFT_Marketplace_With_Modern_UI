@@ -39,6 +39,11 @@ This project showcases trending NFT collections, top sellers, and ranking stats 
 ## 📩 Contact
 Yousef Sobhy – [LinkedIn](www.linkedin.com/in/yousef-sobhii16188328b)
 
+## 🎨 Design
+
+This app is based on the following Figma design:  
+[Figma Design Link]([https://www.figma.com/file/your-design-link](https://www.figma.com/design/D2J9Jb4DMHnmgmXQ01FXH8/NFT-Marketplace?node-id=60-543&t=cbgkzREMWbMTRpwW-1))
+
 
 ## 🚀 Getting Started
 1. Clone this repository  
