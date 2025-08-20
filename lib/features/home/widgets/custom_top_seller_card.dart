@@ -21,7 +21,7 @@ class CustomTopSellerCard extends StatelessWidget {
         child: Container(
           height: 262,
           width: 175,
-          color: const Color.fromARGB(57, 255, 255, 255),
+          color: Colors.white.withOpacity(0.05),
           child: Padding(
             padding: const EdgeInsets.all(10),
             child: Column(

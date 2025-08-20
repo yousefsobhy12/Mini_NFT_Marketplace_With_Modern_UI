@@ -22,7 +22,7 @@ class CustomTrendingCollectionsCard extends StatelessWidget {
           child: Container(
             height: 216,
             width: 208,
-            color: const Color.fromARGB(57, 255, 255, 255),
+            color: Colors.white.withOpacity(0.05),
             child: Column(
               children: [
                 Container(
